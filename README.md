@@ -2,15 +2,15 @@
 
 ## Introduction and Objective
 
-This document describes the use cases of an application installed in an Aragon DAO, to facilitate the exchange of bonded LPT for DAI. For bonded LPT to be withdrawn from its bonded state, an unbonding period must elapse (currently 7 days).
+This document describes the use cases of an application installed in an Aragon DAO, to facilitate the exchange of bonded LPT for DAI. For bonded LPT to be withdrawn from its bonded state, an unbonding period must elapse (currently 7 rounds = ~6.5 days).
 
-The objective of this app is to provide a guarantee that
+The objective of this app is to provide a guarantee that:
 
 IF _a buyer and the DAO have agreed to an exchange_
 AND _the buyer has committed funds to the purchase_
-THEN _there is no way to stop it_, except by stopping Ethereum from processing transactions.
+THEN _there is no way to stop it_, **except by stopping Ethereum from processing transactions.**
 
-Ths avoids the requirement for the DAO (seller) to provide collateral as security for the buyer, to insure against the case that the agreed exchange does not complete.
+This avoids the requirement for the DAO (seller) to provide collateral as security for the buyer (to insure against the case that the agreed exchange does not complete as originally agreed.)
 
 In order to use this application, LPT must first be deposited to the application, and bonded to a node in the network. (See Question 2 below).
 
@@ -60,21 +60,21 @@ This section describes the set of use cases for the app to allow a buyer of LPT 
 
 #### Use Case 4 - FAILURE
 
-Bob proposes a vote for the DAO to sell them `X` bonded LPT to for `Y` DAI, and deposits `Y` DAI
+- Bob proposes a vote for the DAO to sell them `X` bonded LPT to for `Y` DAI, and deposits `Y` DAI
 
-Bob withdraws `Y` DAI (Question 3, see below)
+- Bob withdraws `Y` DAI (Question 3, see below)
 
 #### Use Case 5 - FAILURE
 
-Bob proposes a vote for the DAO to sell them `X` bonded LPT to for `Y` DAI, and deposits `Y` DAI
+- Bob proposes a vote for the DAO to sell them `X` bonded LPT to for `Y` DAI, and deposits `Y` DAI
 
-The DAO votes No, and the `Y` DAI are released back to Alice.
+- The DAO votes No, and the `Y` DAI are released back to Bob.
 
 #### Use Case 6 - SUCCESS
 
 - Bob proposes a vote for the DAO to sell them `X` bonded LPT to for `Y` DAI, and deposits `Y` DAI
 
-- The DAO votes Yes which commits it to sell. The app automatically unbonds `X` LPT. (See Question 1 below).
+- The DAO votes Yes, which commits it to sell. The app automatically unbonds `X` LPT. (See Question 1 below).
 
 - The unbonding period elapses.
 
